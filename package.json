@@ -1,0 +1,15 @@
+{
+  "name": "ymkt-data-validate",
+  "version": "1.0.0",
+  "description": "Validate Data Of Input",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carlos Quispe",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^11.11.7",
+    "commander": "^2.19.0"
+  }
+}
