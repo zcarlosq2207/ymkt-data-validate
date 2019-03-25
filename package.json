@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "@types/node": "^11.11.7",
-    "commander": "^2.19.0"
+    "aws-sdk": "^2.428.0",
+    "commander": "^2.19.0",
+    "event-to-promise": "^0.8.0"
   }
 }
