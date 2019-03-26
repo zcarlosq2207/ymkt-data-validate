@@ -91,4 +91,34 @@ function getTableCampaings() {
     return table;
 }
 exports.getTableCampaings = getTableCampaings;
+function getTableConsultans() {
+    const tableName = 'CoachVirtual.TempConsultans';
+    let table = new mssql_1.Table(tableName);
+    table.create = false;
+    table.columns.add('CodPais', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('Codigo', mssql_1.VarChar(15), { nullable: false, primary: false });
+    table.columns.add('DesNombre', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('DesApePaterno', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('DesApeMaterno', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('DocIdentidad', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('DesEstadoCivil', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('FlagCorreoValidado', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('CorreoElectronico', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('FlagCelular', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('TelefonoMovil', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('AnioCampanaIngreso', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('FechaNacimiento', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('AnioCampana', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('CodRegion', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('CodZona', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('DesGerenteZona', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('CodSeccion', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('EdadBelcorp', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('Edad', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('DesDireccion', mssql_1.VarChar(100), { nullable: true, primary: false });
+    table.columns.add('FlagDigital', mssql_1.VarChar(50), { nullable: true, primary: false });
+    table.columns.add('Token', mssql_1.VarChar(500), { nullable: true, primary: false });
+    return table;
+}
+exports.getTableConsultans = getTableConsultans;
 //# sourceMappingURL=index.js.map

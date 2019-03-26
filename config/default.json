@@ -1,9 +1,9 @@
 {
     "ConnectionsStrings": {
         "PE": {
-            "user": "sa",
-            "password": "P@ssw0rd",
-            "server": "54.157.50.10",
+            "user": "usr_sb2",
+            "password": "Belcorp2016",
+            "server": "AWNTS74",
             "database": "ODS_PE",
             "connectionTimeout": 600000,
             "idleTimeoutMillis": 600000,

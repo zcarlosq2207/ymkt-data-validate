@@ -88,3 +88,37 @@ export function getTableCampaings() : Table
     table.columns.add('Token', VarChar(500), { nullable: true, primary: false });
     return table;
 }
+
+
+
+export function getTableConsultans() : Table
+{
+    const tableName = 'CoachVirtual.TempConsultans';
+    let table = new Table(tableName);
+    table.create = false;
+    
+    table.columns.add('CodPais', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('Codigo', VarChar(15), { nullable: false, primary: false });
+    table.columns.add('DesNombre', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('DesApePaterno', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('DesApeMaterno', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('DocIdentidad', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('DesEstadoCivil', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('FlagCorreoValidado', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('CorreoElectronico', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('FlagCelular', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('TelefonoMovil', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('AnioCampanaIngreso', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('FechaNacimiento', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('AnioCampana', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('CodRegion', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('CodZona', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('DesGerenteZona', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('CodSeccion', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('EdadBelcorp', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('Edad', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('DesDireccion', VarChar(100), { nullable: true, primary: false });
+    table.columns.add('FlagDigital', VarChar(50), { nullable: true, primary: false });
+    table.columns.add('Token', VarChar(500), { nullable: true, primary: false });
+    return table;
+}
