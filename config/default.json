@@ -1,0 +1,178 @@
+{
+    "ConnectionsStrings": {
+        "PE": {
+            "user": "sa",
+            "password": "P@ssw0rd",
+            "server": "54.157.50.10",
+            "database": "ODS_PE",
+            "connectionTimeout": 600000,
+            "idleTimeoutMillis": 600000,
+            "requestTimeout": 600000
+        },
+        "CO": {
+            "user": "usr_sb2",
+            "password": "Belcorp2016",
+            "server": "AWNTS74",
+            "database": "ODS_CO",
+            "connectionTimeout": 600000,
+            "idleTimeoutMillis": 600000,
+            "requestTimeout": 600000
+        },
+        "EC": {
+            "user": "sa",
+            "password": "P@ssw0rd",
+            "server": "54.157.50.10",
+            "database": "ODS_PE_VC"
+        },
+        "CL": {
+            "user": "usr_sb2",
+            "password": "Belcorp2016",
+            "server": "AWNTS74",
+            "database": "ODS_CL",
+            "connectionTimeout": 600000,
+            "idleTimeoutMillis": 600000,
+            "requestTimeout": 600000
+        },
+        "CR": {
+            "user": "usr_sb2",
+            "password": "Belcorp2016",
+            "server": "AWNTS74",
+            "database": "ODS_CR",
+            "connectionTimeout": 600000,
+            "idleTimeoutMillis": 600000,
+            "requestTimeout": 600000
+        },
+        "PA": {
+            "user": "usr_sb2",
+            "password": "Belcorp2016",
+            "server": "AWNTS74",
+            "database": "ODS_PA",
+            "connectionTimeout": 600000,
+            "idleTimeoutMillis": 600000,
+            "requestTimeout": 600000
+        },
+
+        "BO": {
+            "user": "usr_sb2",
+            "password": "Belcorp2016",
+            "server": "AWNTS74",
+            "database": "ODS_BO",
+            "connectionTimeout": 600000,
+            "idleTimeoutMillis": 600000,
+            "requestTimeout": 600000
+        },
+
+        "GT": {
+            "user": "usr_sb2",
+            "password": "Belcorp2016",
+            "server": "AWNTS74",
+            "database": "ODS_GT",
+            "connectionTimeout": 600000,
+            "idleTimeoutMillis": 600000,
+            "requestTimeout": 600000
+        }
+
+    },
+
+   "OfferConfig":{
+        "Path":"10.12.6.173",
+        "Port": "5050"
+   },
+    
+
+    "MongoConnectionsStrings":
+    {
+        "url": "mongodb+srv://virtualcoachqas-xfhrx.mongodb.net",
+        "host": "virtualcoachqas-xfhrx.mongodb.net",
+        "port": 27017,
+        "user": "usradmvcqas",
+        "password": "Belcorp2019.",
+        "database": "HYMDb",
+        "database_email": "nevebounce_cache",
+        "protocol" : "mongodb+srv"
+    },
+    
+    "VariableUrls" : {
+        "Path":"my300972-api.s4hana.ondemand.com",
+        "Offer_ODDPath": "my300972-api.s4hana.ondemand.com",
+        "Offer_ODDLogin" : "/sap/opu/odata/sap/YY1_B2B_CAMP_CONS_OFE_ODD_CDS/$metadata",
+        "Offer_ODDBatch": "/sap/opu/odata/sap/YY1_B2B_CAMP_CONS_OFE_ODD_CDS/$batch",
+        "Offer_ODDGUID": "/sap/opu/odata/sap/YY1_B2B_CAMP_CONS_OFE_ODD_CDS/YY1_B2B_CAMP_CONS_OFE_ODD",
+        "Offer_ODDCBO": "YY1_B2B_CAMP_CONS_OFE_ODD",
+
+        "Offer_LANPath": "my300972-api.s4hana.ondemand.com",
+        "Offer_LANLogin" : "/sap/opu/odata/sap/YY1_B2B_CAMP_CONS_OFE_LAN_CDS/$metadata",
+        "Offer_LANBatch": "/sap/opu/odata/sap/YY1_B2B_CAMP_CONS_OFE_LAN_CDS/$batch",
+        "Offer_LANGUID": "/sap/opu/odata/sap/YY1_B2B_CAMP_CONS_OFE_LAN_CDS/YY1_B2B_CAMP_CONS_OFE_LAN",
+        "Offer_LANCBO": "YY1_B2B_CAMP_CONS_OFE_LAN",
+
+        "Offer_OFPath": "my300972-api.s4hana.ondemand.com",
+        "Offer_OFLogin" : "/sap/opu/odata/sap/YY1_B2B_CAMP_CONS_OFE_OF_CDS/$metadata",
+        "Offer_OFBatch": "/sap/opu/odata/sap/YY1_B2B_CAMP_CONS_OFE_OF_CDS/$batch",
+        "Offer_OFGUID": "/sap/opu/odata/sap/YY1_B2B_CAMP_CONS_OFE_OF_CDS/YY1_B2B_CAMP_CONS_OFE_OF",
+        "Offer_OFCBO": "YY1_B2B_CAMP_CONS_OFE_OF",
+
+        "Offer_SHPath": "my300972-api.s4hana.ondemand.com",
+        "Offer_SHLogin" : "/sap/opu/odata/sap/YY1_B2B_CAMP_CONS_OFE_SH_CDS/$metadata",
+        "Offer_SHBatch": "/sap/opu/odata/sap/YY1_B2B_CAMP_CONS_OFE_SH_CDS/$batch",
+        "Offer_SHGUID": "/sap/opu/odata/sap/YY1_B2B_CAMP_CONS_OFE_SH_CDS/YY1_B2B_CAMP_CONS_OFE_SH",
+        "Offer_SHCBO": "YY1_B2B_CAMP_CONS_OFE_SH",
+
+        "Offer_OPTPath": "my300972-api.s4hana.ondemand.com",
+        "Offer_OPTLogin" : "/sap/opu/odata/sap/YY1_B2B_CAMP_CONS_OFE_OPT_CDS/$metadata",
+        "Offer_OPTBatch": "/sap/opu/odata/sap/YY1_B2B_CAMP_CONS_OFE_OPT_CDS/$batch",
+        "Offer_OPTGUID": "/sap/opu/odata/sap/YY1_B2B_CAMP_CONS_OFE_OPT_CDS/YY1_B2B_CAMP_CONS_OFE_OPT",
+        "Offer_OPTCBO": "YY1_B2B_CAMP_CONS_OFE_OPT",
+
+        "Offer_SEGPath": "my300972-api.s4hana.ondemand.com",
+        "Offer_SEGLogin" : "/sap/opu/odata/sap/YY1_B2B_CAMP_CONS_OFE_SEGM_CDS/$metadata",
+        "Offer_SEGBatch": "/sap/opu/odata/sap/YY1_B2B_CAMP_CONS_OFE_SEGM_CDS/$batch",
+        "Offer_SEGGUID": "/sap/opu/odata/sap/YY1_B2B_CAMP_CONS_OFE_SEGM_CDS/YY1_B2B_CAMP_CONS_OFE_SEGM",
+        "Offer_SEGCBO": "YY1_B2B_CAMP_CONS_OFE_SEGM",
+
+        "ConsultoraPath": "my300972-api.s4hana.ondemand.com",
+        "ConsultoraLogin" : "/sap/opu/odata/sap/YY1_B2B_CONSULTORA_CDS/$metadata",
+        "ConsultoraBatch": "/sap/opu/odata/sap/YY1_B2B_CONSULTORA_CDS/$batch",
+        "ConsultoraGUID": "/sap/opu/odata/sap/YY1_B2B_CONSULTORA_CDS/YY1_B2B_CONSULTORA",
+        "ConsultoraCBO": "YY1_B2B_CONSULTORA",
+
+        "CampaniaConsultoraPath": "my300972-api.s4hana.ondemand.com",
+        "CampaniaConsultoraLogin" : "/sap/opu/odata/sap/YY1_B2B_CAMPANA_CONSULTORA_CDS/$metadata",
+        "CampaniaConsultoraBatch": "/sap/opu/odata/sap/YY1_B2B_CAMPANA_CONSULTORA_CDS/$batch",
+        "CampaniaConsultoraGUID": "/sap/opu/odata/sap/YY1_B2B_CAMPANA_CONSULTORA_CDS/YY1_B2B_CAMPANA_CONSULTORA",
+        "CampaniaConsultoraCBO": "YY1_B2B_CAMPANA_CONSULTORA"
+    },
+
+    "SimbolosMonedas" : {
+        "MonedaBolivia": "Bs",
+        "MonedaChile": "$",
+        "MonedaColombia": "$",
+        "MonedaCostaRica": "¢",
+        "MonedaDominicana": "RD$",
+        "MonedaEcuador": "$" ,
+        "MonedaGuatemala":"Q.",
+        "MonedaMexico": "$",
+        "MonedaPanama": "B/.",
+        "MonedaPeru": "S/.",
+        "MonedaPuertoRico":  "$",
+        "MonedaSalvador": "$"
+
+    },
+
+    "PrefixPhone":{
+        "PE":"51",
+        "EC":"593",
+        "VE":"NULL",
+        "CL":"56",
+        "MX":"52",
+        "BO":"591",
+        "CO":"57",
+        "PA":"507",
+        "CR":"506",
+        "GT":"502",
+        "PR":"1787",
+        "DO":"1809",
+        "SV":"503"
+    }
+
+}

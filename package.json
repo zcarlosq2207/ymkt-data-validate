@@ -12,6 +12,10 @@
     "@types/node": "^11.11.7",
     "aws-sdk": "^2.428.0",
     "commander": "^2.19.0",
-    "event-to-promise": "^0.8.0"
+    "config": "^3.0.1",
+    "event-to-promise": "^0.8.0",
+    "mssql": "^5.0.3",
+    "stream-chain": "^2.1.0",
+    "stream-json": "^1.2.1"
   }
 }

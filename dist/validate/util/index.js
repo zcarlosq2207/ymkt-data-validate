@@ -1,6 +1,17 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const aws_sdk_1 = require("aws-sdk");
+const mssql_1 = require("mssql");
+const cfg = require("config");
+const dbConnectionConfig = cfg.get('ConnectionsStrings');
 function getS3Object(fileName) {
     console.log('Downloading consultants file...');
     const region = process.env.INPUT_BUCKET_REGION;
@@ -34,4 +45,50 @@ function getS3Object(fileName) {
     return s3Pipeline;
 }
 exports.getS3Object = getS3Object;
+function getPool(country) {
+    return __awaiter(this, void 0, void 0, function* () {
+        console.log('Connecting to SQL Server...');
+        const config = dbConnectionConfig.get(country);
+        return yield new mssql_1.ConnectionPool(config).connect();
+    });
+}
+exports.getPool = getPool;
+function getTableCampaings() {
+    const tableName = 'CoachVirtual.TempCampaings';
+    let table = new mssql_1.Table(tableName);
+    table.create = false;
+    table.columns.add('CodPais', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('CodConsultora', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('AnioCampanaProceso', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('AnioCampanaExposicion', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('CodComportamiento', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('DesComportamiento', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('CodSegmentoDigital', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('DesSegmentoDigital', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('DesConstanciaNuevas', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('ScoreMarca', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('ScoreCategoria', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('ScoreTop', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('ScoreLanzamientos', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('ProbabilidadFuga', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('ProbabilidadNuevaExitosa', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('ProbabilidadCaidaPromedio', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('DecilFuga', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('DecilNuevaExitosa', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('DecilCaidaPromedio', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('FlagOfertaDigitalUc', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('MontoVentaTotalCampana', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('FlagIpUnico', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('FlagIpUnico5c', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('NroOfertaDigitalPu5c', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('FlagTippingPoint4', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('FlagTippingPoint5', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('FlagTippingPoint6', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('MontoTippingPoint', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('FlagConstanciaActuales', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('FlagPasoPedido', mssql_1.VarChar(500), { nullable: true, primary: false });
+    table.columns.add('Token', mssql_1.VarChar(500), { nullable: true, primary: false });
+    return table;
+}
+exports.getTableCampaings = getTableCampaings;
 //# sourceMappingURL=index.js.map
